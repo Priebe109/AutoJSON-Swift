@@ -1,0 +1,6 @@
+use_frameworks!
+target 'AutoJSON_Tests' do
+  pod 'AutoJSON', :path => '../'
+  
+  
+end

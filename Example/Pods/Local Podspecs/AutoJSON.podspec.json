@@ -1,0 +1,22 @@
+{
+  "name": "AutoJSON",
+  "version": "0.1.0",
+  "summary": "A short description of AutoJSON.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Priebe109/AutoJSON",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Priebe109": "lasse.priebe@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/Priebe109/AutoJSON.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AutoJSON/Classes/**/*"
+}

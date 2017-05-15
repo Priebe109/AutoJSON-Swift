@@ -1,0 +1,6 @@
+framework module AutoJSON {
+  umbrella header "AutoJSON-umbrella.h"
+
+  export *
+  module * { export * }
+}

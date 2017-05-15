@@ -1,0 +1,16 @@
+PODS:
+  - AutoJSON (0.1.0)
+
+DEPENDENCIES:
+  - AutoJSON (from `../`)
+
+EXTERNAL SOURCES:
+  AutoJSON:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AutoJSON: f2e8392393f07a72affb41f63a48ebb6f9184fed
+
+PODFILE CHECKSUM: 6cb09bc8fcf85f50461c2bee231eefec255b46f8
+
+COCOAPODS: 1.2.1
