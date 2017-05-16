@@ -1,15 +1,7 @@
-#
-# Be sure to run `pod lib lint AutoJSON.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'AutoJSON'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AutoJSON.'
+  s.summary          = 'Automatic conversion between Swift and JSON.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +10,16 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Framework for fully automatic conversion between Swift and JSON. Allows you to serialize Swift objects to JSON and deserialize JSON to Swift objects with no boilerplate code needed.
                        DESC
 
-  s.homepage         = 'https://github.com/Priebe109/AutoJSON'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/Priebe109/AutoJSON-Swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Priebe109' => 'lasse.priebe@icloud.com' }
-  s.source           = { :git => 'https://github.com/Priebe109/AutoJSON.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/Priebe109/AutoJSON-Swift.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/LassePriebe'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AutoJSON/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AutoJSON' => ['AutoJSON/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
