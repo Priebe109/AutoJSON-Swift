@@ -1,2 +1,4 @@
 # AutoJSON Swift
-Framework for fully automatic conversion between Swift objects and JSON.
+Framework for automatic conversion between Swift and JSON. No boilerplate code needed.
+
+## Under development
