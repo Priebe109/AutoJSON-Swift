@@ -8,7 +8,7 @@
 
 import Foundation
 
-indirect enum AJSCompliantPropertyType {
+public indirect enum AJSCompliantPropertyType {
     
     /// Indicates the property is a compliant primitive, e.g. String or Int.
     case primitive(ofType: AJSCompliantPrimitive.Type)

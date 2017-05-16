@@ -8,13 +8,13 @@
 
 import Foundation
 
-class AJSCompliantStandardObject: NSObject, AJSCompliantObject {
+open class AJSCompliantStandardObject: NSObject, AJSCompliantObject {
     
-    override init() {
+    override public init() {
         super.init()
     }
     
-    required init(withContext context: AJSSerializationContext) {
+    required public init(withContext context: AJSSerializationContext) {
         super.init()
     }
 }

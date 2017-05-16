@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Public Deserialization Interface
 
 /// Deserializes JSON data into compliant objects or arrays.
-class AJSDeserializer {
+open class AJSDeserializer {
     
     static let `default` = AJSDeserializer()
     

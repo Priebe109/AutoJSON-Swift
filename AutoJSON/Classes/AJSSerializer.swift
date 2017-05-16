@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Public Serialization Interface
 
 /// Serializes compliant objects or arrays into JSON data.
-class AJSSerializer {
+open class AJSSerializer {
     
     static let `default` = AJSSerializer()
     

@@ -10,7 +10,7 @@ import Foundation
 
 extension Optional: AJSCompliant {
     
-    static var ajsCompliantPropertyType: AJSCompliantPropertyType {
+    public static var ajsCompliantPropertyType: AJSCompliantPropertyType {
         
         if let type = Wrapped.self as? AJSCompliant.Type {
             return .optional(ofPropertyType: type.ajsCompliantPropertyType)
@@ -22,7 +22,7 @@ extension Optional: AJSCompliant {
 
 extension ImplicitlyUnwrappedOptional: AJSCompliant {
     
-    static var ajsCompliantPropertyType: AJSCompliantPropertyType {
+    public static var ajsCompliantPropertyType: AJSCompliantPropertyType {
         
         if let type = Wrapped.self as? AJSCompliant.Type {
             return .optional(ofPropertyType: type.ajsCompliantPropertyType)

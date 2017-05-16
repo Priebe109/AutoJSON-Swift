@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol AJSCompliantCollection: AJSCompliant, Collection { }
+public protocol AJSCompliantCollection: AJSCompliant, Collection { }
 
 extension Array: AJSCompliantCollection { }
 
 extension AJSCompliantCollection {
     
-    static var ajsCompliantPropertyType: AJSCompliantPropertyType {
+    public static var ajsCompliantPropertyType: AJSCompliantPropertyType {
         
         if let type = Iterator.Element.self as? AJSCompliant.Type {
             return .collection(ofPropertyType: type.ajsCompliantPropertyType)

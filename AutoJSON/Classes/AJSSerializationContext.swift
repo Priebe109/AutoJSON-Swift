@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AJSSerializationContext {
+open class AJSSerializationContext {
     
     /// Names of properties of the object that should be ignored by AutoJSON.
     var ignoredProperties: [String]?

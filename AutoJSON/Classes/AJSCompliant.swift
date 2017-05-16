@@ -9,7 +9,7 @@
 import Foundation
 
 /// The base protocol for compatability with AutoJSON.
-protocol AJSCompliant {
+public protocol AJSCompliant {
     
     /// Returns the type's property type as specified by AutoJSON.
     static var ajsCompliantPropertyType: AJSCompliantPropertyType { get }

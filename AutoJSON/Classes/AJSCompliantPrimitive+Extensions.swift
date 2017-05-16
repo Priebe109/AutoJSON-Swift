@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AJSCompliantPrimitive: AJSCompliant { }
+public protocol AJSCompliantPrimitive: AJSCompliant { }
 
 extension Bool: AJSCompliantPrimitive { }
 extension Int: AJSCompliantPrimitive { }
@@ -18,7 +18,7 @@ extension String: AJSCompliantPrimitive { }
 
 extension AJSCompliantPrimitive {
     
-    static var ajsCompliantPropertyType: AJSCompliantPropertyType {
+    public static var ajsCompliantPropertyType: AJSCompliantPropertyType {
         
         return .primitive(ofType: self)
     }

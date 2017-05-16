@@ -9,7 +9,7 @@
 import Foundation
 
 /// Subset of the informal NSKeyValueCoding protocol required by AutoJSON.
-protocol NSKeyValueCodingRequirementCompatible {
+public protocol NSKeyValueCodingRequirementCompatible {
 
     func value(forKey key: String) -> Any?
     func value(forUndefinedKey key: String) -> Any?
@@ -18,7 +18,7 @@ protocol NSKeyValueCodingRequirementCompatible {
 }
 
 /// Protocol implemented by objects to allow automatic serialization and deserialization by AutoJSON.
-protocol AJSCompliantObject: AJSCompliant, NSKeyValueCodingRequirementCompatible {
+public protocol AJSCompliantObject: AJSCompliant, NSKeyValueCodingRequirementCompatible {
     
     /// Returns a list of tuples containing names and the corresponding ajs types of the object's properties.
     var ajsCompliantProperties: [(name: String?, type: AJSCompliantPropertyType)] { get }
@@ -29,11 +29,11 @@ protocol AJSCompliantObject: AJSCompliant, NSKeyValueCodingRequirementCompatible
 
 extension AJSCompliantObject {
     
-    static var ajsCompliantPropertyType: AJSCompliantPropertyType {
+    public static var ajsCompliantPropertyType: AJSCompliantPropertyType {
         return .object(ofType: self)
     }
     
-    var ajsCompliantProperties: [(name: String?, type: AJSCompliantPropertyType)] {
+    public var ajsCompliantProperties: [(name: String?, type: AJSCompliantPropertyType)] {
         
         var mirror: Mirror? = Mirror(reflecting: self)
         var children: [Mirror.Child] = []
