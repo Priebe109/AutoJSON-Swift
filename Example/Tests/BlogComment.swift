@@ -1,5 +1,5 @@
 //
-//  TestModel.swift
+//  BlogComment.swift
 //  AutoJSON Swift
 //
 //  Created by Lasse Hammer Priebe on 16/05/2017.
@@ -8,6 +8,8 @@
 
 import AutoJSON
 
-class TestModel: AJSCompliantStandardObject {
+class BlogComment: AJSCompliantStandardObject {
     
+    var author: BlogUser!
+    var content: String = ""
 }

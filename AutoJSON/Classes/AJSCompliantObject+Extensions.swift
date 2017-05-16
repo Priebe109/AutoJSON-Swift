@@ -20,11 +20,11 @@ public protocol NSKeyValueCodingRequirementCompatible {
 /// Protocol implemented by objects to allow automatic serialization and deserialization by AutoJSON.
 public protocol AJSCompliantObject: AJSCompliant, NSKeyValueCodingRequirementCompatible {
     
+    /// Empty initializer required by AutoJSON to instantiate the object, before building.
+    init()
+    
     /// Returns a list of tuples containing names and the corresponding ajs types of the object's properties.
     var ajsCompliantProperties: [(name: String?, type: AJSCompliantPropertyType)] { get }
-    
-    /// Initializer required by AutoJSON to instantiate the object. In most cases you just have to call super.init().
-    init(withContext context: AJSSerializationContext)
 }
 
 extension AJSCompliantObject {

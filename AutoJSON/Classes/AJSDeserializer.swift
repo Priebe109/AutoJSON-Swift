@@ -13,11 +13,13 @@ import Foundation
 /// Deserializes JSON data into compliant objects or arrays.
 open class AJSDeserializer {
     
-    static let `default` = AJSDeserializer()
+    // MARK: - Configuration
     
-    var readingOptions: JSONSerialization.ReadingOptions = .allowFragments
+    public var readingOptions: JSONSerialization.ReadingOptions = .allowFragments
 
-    func deserialize<T: AJSCompliantObject>(_ data: Data) -> T? {
+    // MARK: - Deserialization
+    
+    public func deserialize<T: AJSCompliantObject>(_ data: Data) -> T? {
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: readingOptions)
             guard let jsonDictionary = jsonObject as? [String : Any] else {
@@ -30,14 +32,14 @@ open class AJSDeserializer {
         }
     }
     
-    func deserializeFromString<T: AJSCompliantObject>(_ jsonString: String) -> T? {
+    public func deserializeFromString<T: AJSCompliantObject>(_ jsonString: String) -> T? {
         if let data = jsonString.data(using: .utf8) {
             return deserialize(data)
         }
         return nil
     }
     
-    func deserialize<T: AJSCompliantCollection>(_ data: Data) -> [T]? {
+    public func deserialize<T: AJSCompliantCollection>(_ data: Data) -> [T]? {
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: readingOptions)
             guard let jsonArray = jsonObject as? NSArray else {
@@ -50,7 +52,7 @@ open class AJSDeserializer {
         }
     }
     
-    func deserializeFromString<T: AJSCompliantCollection>(_ jsonString: String) -> [T]? {
+    public func deserializeFromString<T: AJSCompliantCollection>(_ jsonString: String) -> [T]? {
         if let data = jsonString.data(using: .utf8) {
             return deserialize(data)
         }
@@ -83,8 +85,7 @@ extension AJSDeserializer {
     internal func makeObject(from dictionary: [String : Any], ofType type: AJSCompliantObject.Type) -> AJSCompliantObject {
         
         // Create a new instance of the type.
-        let context = AJSSerializationContext()
-        let compliantObject = type.init(withContext: context)
+        let compliantObject = type.init()
         
         // Iterate over the ajs properties to move data to the object.
         let properties = compliantObject.ajsCompliantProperties

@@ -13,11 +13,13 @@ import Foundation
 /// Serializes compliant objects or arrays into JSON data.
 open class AJSSerializer {
     
-    static let `default` = AJSSerializer()
+    // MARK: - Configuration
     
-    var writingOptions: JSONSerialization.WritingOptions = .prettyPrinted
+    public var writingOptions: JSONSerialization.WritingOptions = .prettyPrinted
 
-    func serialize<T: AJSCompliantObject>(_ object: T) -> Data? {
+    // MARK: - Serialization
+    
+    public func serialize<T: AJSCompliantObject>(_ object: T) -> Data? {
         do {
             return try JSONSerialization.data(withJSONObject: makeJSONCompatibleDictionary(from: object), options: writingOptions)
         } catch let error {
@@ -26,14 +28,14 @@ open class AJSSerializer {
         }
     }
     
-    func serializeToString<T: AJSCompliantObject>(_ object: T) -> String? {
+    public func serializeToString<T: AJSCompliantObject>(_ object: T) -> String? {
         if let data = serialize(object) {
             return String(data: data, encoding: .utf8)
         }
         return nil
     }
     
-    func serialize<T: AJSCompliantCollection>(_ collection: T) -> Data? {
+    public func serialize<T: AJSCompliantCollection>(_ collection: T) -> Data? {
         do {
             switch T.ajsCompliantPropertyType {
             case .collection(let propertyType):
@@ -47,7 +49,7 @@ open class AJSSerializer {
         }
     }
     
-    func serializeToString<T: AJSCompliantCollection>(_ collection: T) -> String? {
+    public func serializeToString<T: AJSCompliantCollection>(_ collection: T) -> String? {
         if let data = serialize(collection) {
             return String(data: data, encoding: .utf8)
         }

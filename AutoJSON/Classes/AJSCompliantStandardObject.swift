@@ -10,11 +10,7 @@ import Foundation
 
 open class AJSCompliantStandardObject: NSObject, AJSCompliantObject {
     
-    override public init() {
-        super.init()
-    }
-    
-    required public init(withContext context: AJSSerializationContext) {
+    override public required init() {
         super.init()
     }
 }

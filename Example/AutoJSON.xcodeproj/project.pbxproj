@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17BAF2A81ECB10A100C92A61 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF2A71ECB10A100C92A61 /* TestModel.swift */; };
+		17BAF2A81ECB10A100C92A61 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF2A71ECB10A100C92A61 /* BlogPost.swift */; };
+		17BAF2AF1ECB18B900C92A61 /* BlogUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF2AE1ECB18B900C92A61 /* BlogUser.swift */; };
+		17BAF2B11ECB190200C92A61 /* BlogComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF2B01ECB190200C92A61 /* BlogComment.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EE1DD0ED96998B8BFE786E81 /* Pods_AutoJSON_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B82531E45867196B5DFB245 /* Pods_AutoJSON_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		064B6DB84C3804F49814B76C /* AutoJSON.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AutoJSON.podspec; path = ../AutoJSON.podspec; sourceTree = "<group>"; };
-		17BAF2A71ECB10A100C92A61 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		17BAF2A71ECB10A100C92A61 /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		17BAF2AE1ECB18B900C92A61 /* BlogUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogUser.swift; sourceTree = "<group>"; };
+		17BAF2B01ECB190200C92A61 /* BlogComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogComment.swift; sourceTree = "<group>"; };
 		29C9FDB41BEFD5E3486F00D0 /* Pods-AutoJSON_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoJSON_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoJSON_Tests/Pods-AutoJSON_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* AutoJSON_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoJSON_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17BAF2AD1ECB184A00C92A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17BAF2AE1ECB18B900C92A61 /* BlogUser.swift */,
+				17BAF2A71ECB10A100C92A61 /* BlogPost.swift */,
+				17BAF2B01ECB190200C92A61 /* BlogComment.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +73,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				17BAF2A71ECB10A100C92A61 /* TestModel.swift */,
+				17BAF2AD1ECB184A00C92A61 /* Model */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -223,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BAF2AF1ECB18B900C92A61 /* BlogUser.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-				17BAF2A81ECB10A100C92A61 /* TestModel.swift in Sources */,
+				17BAF2A81ECB10A100C92A61 /* BlogPost.swift in Sources */,
+				17BAF2B11ECB190200C92A61 /* BlogComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

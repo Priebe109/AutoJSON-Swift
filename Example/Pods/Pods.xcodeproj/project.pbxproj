@@ -15,8 +15,8 @@
 		172172221ECA6527009954AA /* AJSCompliantPropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172172181ECA6527009954AA /* AJSCompliantPropertyType.swift */; };
 		172172231ECA6527009954AA /* AJSCompliantStandardObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172172191ECA6527009954AA /* AJSCompliantStandardObject.swift */; };
 		172172241ECA6527009954AA /* AJSDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721721A1ECA6527009954AA /* AJSDeserializer.swift */; };
-		172172251ECA6527009954AA /* AJSSerializationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721721B1ECA6527009954AA /* AJSSerializationContext.swift */; };
 		172172261ECA6527009954AA /* AJSSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721721C1ECA6527009954AA /* AJSSerializer.swift */; };
+		17BAF2AC1ECB143500C92A61 /* AutoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAF2AB1ECB143500C92A61 /* AutoJSON.swift */; };
 		2CAA5D21B44C35D200E790AB1BFEC0B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		57578F0025085A534CBED86979BCC9D5 /* AutoJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 495B9B060649986F7E116DBA165BEF87 /* AutoJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62E5E93D3D2703D60CC4840ADA83F5BB /* Pods-AutoJSON_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3E86012D70858EDC7B9292E87EFB1A /* Pods-AutoJSON_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,8 +45,8 @@
 		172172181ECA6527009954AA /* AJSCompliantPropertyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJSCompliantPropertyType.swift; sourceTree = "<group>"; };
 		172172191ECA6527009954AA /* AJSCompliantStandardObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJSCompliantStandardObject.swift; sourceTree = "<group>"; };
 		1721721A1ECA6527009954AA /* AJSDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJSDeserializer.swift; sourceTree = "<group>"; };
-		1721721B1ECA6527009954AA /* AJSSerializationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJSSerializationContext.swift; sourceTree = "<group>"; };
 		1721721C1ECA6527009954AA /* AJSSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJSSerializer.swift; sourceTree = "<group>"; };
+		17BAF2AB1ECB143500C92A61 /* AutoJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoJSON.swift; sourceTree = "<group>"; };
 		2820E4730D1EC8EF09ED34A974323B84 /* Pods-AutoJSON_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AutoJSON_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2D01E08A70BED1EE76D6D9B946916D63 /* Pods-AutoJSON_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AutoJSON_Tests.modulemap"; sourceTree = "<group>"; };
 		3AB9AE21F358DEAF4B8E690A9F1DC02A /* Pods-AutoJSON_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AutoJSON_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -174,6 +174,7 @@
 		F106C7B3E889E6387EE1A59DFE86B413 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				17BAF2AB1ECB143500C92A61 /* AutoJSON.swift */,
 				172172131ECA6527009954AA /* AJSCompliant.swift */,
 				172172141ECA6527009954AA /* AJSCompliantCollection+Extensions.swift */,
 				172172151ECA6527009954AA /* AJSCompliantObject+Extensions.swift */,
@@ -182,7 +183,6 @@
 				172172181ECA6527009954AA /* AJSCompliantPropertyType.swift */,
 				172172191ECA6527009954AA /* AJSCompliantStandardObject.swift */,
 				1721721A1ECA6527009954AA /* AJSDeserializer.swift */,
-				1721721B1ECA6527009954AA /* AJSSerializationContext.swift */,
 				1721721C1ECA6527009954AA /* AJSSerializer.swift */,
 			);
 			path = Classes;
@@ -313,8 +313,8 @@
 				1721721D1ECA6527009954AA /* AJSCompliant.swift in Sources */,
 				1721721F1ECA6527009954AA /* AJSCompliantObject+Extensions.swift in Sources */,
 				172172211ECA6527009954AA /* AJSCompliantPrimitive+Extensions.swift in Sources */,
+				17BAF2AC1ECB143500C92A61 /* AutoJSON.swift in Sources */,
 				172172221ECA6527009954AA /* AJSCompliantPropertyType.swift in Sources */,
-				172172251ECA6527009954AA /* AJSSerializationContext.swift in Sources */,
 				F4BCEE61E31E3683402E6AF0C9331554 /* AutoJSON-dummy.m in Sources */,
 				172172261ECA6527009954AA /* AJSSerializer.swift in Sources */,
 				172172201ECA6527009954AA /* AJSCompliantOptional+Extensions.swift in Sources */,
